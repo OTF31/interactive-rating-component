@@ -4,7 +4,7 @@ import IconStar from "./assets/icon-star.svg";
 import IllustrationThankYou from "./assets/illustration-thank-you.svg";
 
 const App = () => {
-  const [submitted, setSubmitted] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
   const [rating, setRating] = useState(0);
 
   return (
@@ -35,24 +35,52 @@ const App = () => {
             {/*Buttons*/}
             <div className="flex justify-around gap-[19px] mb-[5px]">
               <div className="rounded-full text-[#7C8798] bg-[#262f38]">
-                <button className="px-[17px] py-2 text-[14px]">1</button>
+                <button
+                  className="px-[17px] py-2 text-[14px] focus:bg-[#FB7413] focus:text-white rounded-full hover:bg-[#7C8798] hover:text-white"
+                  onClick={() => setRating(1)}
+                >
+                  1
+                </button>
               </div>
               <div className="rounded-full text-[#7C8798] bg-[#262f38]">
-                <button className="px-[17px] py-2 text-[14px]">2</button>
+                <button
+                  className="px-[17px] py-2 text-[14px] focus:bg-[#FB7413] focus:text-white rounded-full hover:bg-[#7C8798] hover:text-white"
+                  onClick={() => setRating(2)}
+                >
+                  2
+                </button>
               </div>
               <div className="rounded-full text-[#7C8798] bg-[#262f38]">
-                <button className="px-[17px] py-2 text-[14px]">3</button>
+                <button
+                  className="px-[17px] py-2 text-[14px] focus:bg-[#FB7413] focus:text-white rounded-full hover:bg-[#7C8798] hover:text-white"
+                  onClick={() => setRating(3)}
+                >
+                  3
+                </button>
               </div>
               <div className="rounded-full text-[#7C8798] bg-[#262f38]">
-                <button className="px-[17px] py-2 text-[14px]">4</button>
+                <button
+                  className="px-[17px] py-2 text-[14px] focus:bg-[#FB7413] focus:text-white rounded-full hover:bg-[#7C8798] hover:text-white"
+                  onClick={() => setRating(4)}
+                >
+                  4
+                </button>
               </div>
               <div className="rounded-full text-[#7C8798] bg-[#262f38]">
-                <button className="px-[17px] py-2 text-[14px]">5</button>
+                <button
+                  className="px-[17px] py-2 text-[14px] focus:bg-[#FB7413] focus:text-white rounded-full hover:bg-[#7C8798] hover:text-white"
+                  onClick={() => setRating(5)}
+                >
+                  5
+                </button>
               </div>
             </div>
 
-            {/*Sumbit*/}
-            <button className="bg-[#FB7413] text-[14px] tracking-[0.15em] font-bold text-white py-3 rounded-3xl relative bottom-1">
+            {/*Submit*/}
+            <button
+              onClick={() => setSubmitted(true)}
+              className="bg-[#FB7413] text-[14px] tracking-[0.15em] font-bold text-white py-3 rounded-3xl relative bottom-1 hover:bg-white hover:text-[#FB7413]"
+            >
               SUBMIT
             </button>
           </>
@@ -68,9 +96,11 @@ const App = () => {
             </div>
 
             {/*Rating*/}
-            <p className="text-[#FB7413] text-[14px] mb-1">
-              You selected {rating} out of 5
-            </p>
+            <div className="text-[#FB7413] text-[15px] rounded-3xl bg-[#232C39] px-[14px] py-[7px] font-[400]">
+              <span className="relative top-[2px] block">
+                You selected {rating} out of 5
+              </span>
+            </div>
 
             {/*Thank you*/}
             <h1 className="text-white font-bold text-[23.5px] mt-3 ">

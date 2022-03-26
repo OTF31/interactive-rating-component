@@ -90,7 +90,7 @@ const App = () => {
             </div>
 
             {/*Rating*/}
-            <div className="text-[#FB7413] text-[15px] rounded-3xl bg-[#232C39] px-[14px] py-[7px] font-[400] md:relative md:top-5">
+            <div className="text-[#FB7413] text-[15px] rounded-3xl bg-[#232C39] px-[14px] py-[7px] font-[400] md:relative md:top-5 md:px-[22px]">
               <span className="relative top-[2px] block">
                 You selected {rating} out of 5
               </span>
